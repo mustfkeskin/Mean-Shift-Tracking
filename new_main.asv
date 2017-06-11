@@ -1,0 +1,19 @@
+clear;
+
+global rect_x
+global rect_y
+global target_model
+
+v = VideoReader('Ball.avi');
+frame = readFrame(v);
+[rows, cols] = size(frame);
+
+[rect, rect_x, rect_y, H, W] = Select_patch(frame,1);
+target_model = pdf_representation(frame, rect);
+
+while hasFrame(v)
+    frame = readFrame(v);
+    rect = track(frame, rect);
+    rect = frame[rec
+    imshow(frame);
+end

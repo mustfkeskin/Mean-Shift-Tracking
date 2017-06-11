@@ -1,0 +1,19 @@
+function  weight = CalWeight(frame, target, target_candidate, rec)
+
+[rows, cols] = size(rec);
+
+weight = ones(rows, cols);
+
+split(frame,bgr_planes);
+row_index = rec.y;
+col_index = rec.x;
+
+for k=1:3
+    row_index = rec.y;
+    for i=1:rows
+        col_index = rec.x;
+        for j=1:cols
+            
+        end
+    end
+end
